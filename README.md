@@ -11,6 +11,6 @@ https://ncrna.jp/ の静的HTML版サイトです。
 
 ## 関連リポジトリ
 
-静的化・監査用ツールキット:
+静的化用ツールキット:
 
 https://github.com/ncrna-jp/cms-static-html-toolkit

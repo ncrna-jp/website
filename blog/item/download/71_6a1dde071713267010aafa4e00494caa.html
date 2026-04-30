@@ -1,0 +1,41 @@
+#!/bin/sh
+
+cd /Users/Nakagawa_imac/Desktop/2018_NGS_standard
+
+#sra download
+/Users/Nakagawa_imac/Applications/Aspera\ Connect.app/Contents/Resources/ascp -T -k 1 -i /Users/Nakagawa_imac/Applications/Aspera\ Connect.app/Contents/Resources/asperaweb_id_dsa.openssh anonftp@ftp.ncbi.nlm.nih.gov:/sra/sra-instant/reads/ByRun/sra/SRR/SRR694/SRR6946223/SRR6946223.sra .
+/Users/Nakagawa_imac/Applications/Aspera\ Connect.app/Contents/Resources/ascp -T -k 1 -i /Users/Nakagawa_imac/Applications/Aspera\ Connect.app/Contents/Resources/asperaweb_id_dsa.openssh anonftp@ftp.ncbi.nlm.nih.gov:/sra/sra-instant/reads/ByRun/sra/SRR/SRR694/SRR6946224/SRR6946224.sra .
+/Users/Nakagawa_imac/Applications/Aspera\ Connect.app/Contents/Resources/ascp -T -k 1 -i /Users/Nakagawa_imac/Applications/Aspera\ Connect.app/Contents/Resources/asperaweb_id_dsa.openssh anonftp@ftp.ncbi.nlm.nih.gov:/sra/sra-instant/reads/ByRun/sra/SRR/SRR694/SRR6946225/SRR6946225.sra .
+/Users/Nakagawa_imac/Applications/Aspera\ Connect.app/Contents/Resources/ascp -T -k 1 -i /Users/Nakagawa_imac/Applications/Aspera\ Connect.app/Contents/Resources/asperaweb_id_dsa.openssh anonftp@ftp.ncbi.nlm.nih.gov:/sra/sra-instant/reads/ByRun/sra/SRR/SRR694/SRR6946226/SRR6946226.sra .
+/Users/Nakagawa_imac/Applications/Aspera\ Connect.app/Contents/Resources/ascp -T -k 1 -i /Users/Nakagawa_imac/Applications/Aspera\ Connect.app/Contents/Resources/asperaweb_id_dsa.openssh anonftp@ftp.ncbi.nlm.nih.gov:/sra/sra-instant/reads/ByRun/sra/SRR/SRR694/SRR6946227/SRR6946227.sra .
+/Users/Nakagawa_imac/Applications/Aspera\ Connect.app/Contents/Resources/ascp -T -k 1 -i /Users/Nakagawa_imac/Applications/Aspera\ Connect.app/Contents/Resources/asperaweb_id_dsa.openssh anonftp@ftp.ncbi.nlm.nih.gov:/sra/sra-instant/reads/ByRun/sra/SRR/SRR694/SRR6946228/SRR6946228.sra .
+
+#sam to bam conversinon
+fastq-dump ./SRR6946223.sra
+fastq-dump ./SRR6946224.sra
+fastq-dump ./SRR6946225.sra
+fastq-dump ./SRR6946226.sra
+fastq-dump ./SRR6946227.sra
+fastq-dump ./SRR6946228.sra
+
+#hisat2 mapping
+hisat2 -p 4 -x ./genome/genome_index -U SRR6946223.fastq -S SRR6946223.sam
+hisat2 -p 4 -x ./genome/genome_index -U SRR6946224.fastq -S SRR6946224.sam
+hisat2 -p 4 -x ./genome/genome_index -U SRR6946225.fastq -S SRR6946225.sam
+hisat2 -p 4 -x ./genome/genome_index -U SRR6946226.fastq -S SRR6946226.sam
+hisat2 -p 4 -x ./genome/genome_index -U SRR6946227.fastq -S SRR6946227.sam
+hisat2 -p 4 -x ./genome/genome_index -U SRR6946228.fastq -S SRR6946228.sam
+
+#sam to sorted bam & index
+samtools sort -@ 4 -O bam -o SRR6946223.sort.bam SRR6946223.sam
+samtools sort -@ 4 -O bam -o SRR6946224.sort.bam SRR6946224.sam
+samtools sort -@ 4 -O bam -o SRR6946225.sort.bam SRR6946225.sam
+samtools sort -@ 4 -O bam -o SRR6946226.sort.bam SRR6946226.sam
+samtools sort -@ 4 -O bam -o SRR6946227.sort.bam SRR6946227.sam
+samtools sort -@ 4 -O bam -o SRR6946228.sort.bam SRR6946228.sam
+samtools index SRR6946223.sort.bam
+samtools index SRR6946224.sort.bam
+samtools index SRR6946225.sort.bam
+samtools index SRR6946226.sort.bam
+samtools index SRR6946227.sort.bam
+samtools index SRR6946228.sort.bam

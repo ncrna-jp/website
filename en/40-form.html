@@ -1,0 +1,666 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#" xml:lang="ja-jp" lang="ja-jp" >
+<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <base href="40-form.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="RNA, non-coding, Scientific Research" />
+	<meta name="description" content="The official website for 'non-coding RNA neo-taxonomy,' a Grant-in-Aid for Scientific Research on Innovative Areas." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>フォーム - non-coding RNA neo-taxonomy</title>
+	<link rel="preload" as="image" href="../images/logo.png" fetchpriority="high" />
+<link href="../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../plugins/editors/jckeditor/typography/typography2.php" rel="stylesheet" type="text/css" media="null" attribs="[]" />
+	<link href="../media/system/css/modal.610b7416.css" rel="stylesheet" type="text/css" />
+	<link href="../local-assets/css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+	<link href="../components/com_k2/css/k2.95974547.css" rel="stylesheet" type="text/css" />
+	<link href="../templates/rt_afterburner2/css-compiled/menu-ee7c12f85f7d9608b8e4e547fcd64274.css" rel="stylesheet" type="text/css" />
+	<link href="../templates/rt_afterburner2/css-compiled/menu-responsive-ee7c12f85f7d9608b8e4e547fcd64274.css" rel="stylesheet" type="text/css" />
+	<link href="../libraries/gantry/css/grid-responsive.css" rel="stylesheet" type="text/css" />
+	<link href="../templates/rt_afterburner2/css-compiled/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="../templates/rt_afterburner2/css-compiled/master-ed858d5e6d78a785d30056a6aa4526e5.css" rel="stylesheet" type="text/css" />
+	<link href="../templates/rt_afterburner2/css-compiled/mediaqueries.css" rel="stylesheet" type="text/css" />
+	<link href="../templates/rt_afterburner2/css/rt_afterburner2-custom.css" rel="stylesheet" type="text/css" />
+	<link href="../media/mod_languages/css/template.c8e9ec5e.css" rel="stylesheet" type="text/css" />
+	<link href="../media/mod_zentools/css/zentools.min.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+#rt-logo {background: url(../images/logo.png) 50% 0 no-repeat !important;}
+#rt-logo {width: 172px;height: 66px;}
+
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"0c00997a04e7fbf3b2cba3d9cb0a51a6","system.paths":{"root":"","base":""}}</script>
+	<script src="../media/system/js/mootools-core.aba4a914.js" type="text/javascript"></script>
+	<script src="../media/system/js/core.f9d449d4.js" type="text/javascript"></script>
+	<script src="../media/system/js/mootools-more.bfda9a7f.js" type="text/javascript"></script>
+	<script src="../media/system/js/modal.321fe1e9.js" type="text/javascript"></script>
+	<script src="../media/jui/js/jquery.min.a7b2e470.js" type="text/javascript"></script>
+	<script src="../media/jui/js/jquery-noconflict.378a6986.js" type="text/javascript"></script>
+	<script src="../media/jui/js/jquery-migrate.min.ea10f608.js" type="text/javascript"></script>
+	<script src="../media/k2/assets/js/k2.frontend.ad039ea8.js" type="text/javascript"></script>
+	<script src="../media/system/js/caption.b66e3625.js" type="text/javascript"></script>
+	<script src="../libraries/gantry/js/browser-engines.js" type="text/javascript"></script>
+	<script src="../templates/rt_afterburner2/js/rokmediaqueries.js" type="text/javascript"></script>
+	<script src="../modules/mod_roknavmenu/themes/default/js/rokmediaqueries.js" type="text/javascript"></script>
+	<script src="../modules/mod_roknavmenu/themes/default/js/responsive.js" type="text/javascript"></script>
+	<script src="../media/mod_zentools/js/zentools.js" type="text/javascript"></script>
+	<script src="../media/mod_zentools/js/slideshow/jquery.flexslider.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+		jQuery(function($) {
+			SqueezeBox.initialize({});
+			initSqueezeBox();
+			$(document).on('subform-row-add', initSqueezeBox);
+
+			function initSqueezeBox(event, container)
+			{
+				SqueezeBox.assign($(container || document).find('a.modal').get(), {
+					parse: 'rel'
+				});
+			}
+		});
+
+		window.jModalClose = function () {
+			SqueezeBox.close();
+		};
+
+		// Add extra modal close functionality for tinyMCE-based editors
+		document.onreadystatechange = function () {
+			if (document.readyState == 'interactive' && typeof tinyMCE != 'undefined' && tinyMCE)
+			{
+				if (typeof window.jModalClose_no_tinyMCE === 'undefined')
+				{
+					window.jModalClose_no_tinyMCE = typeof(jModalClose) == 'function'  ?  jModalClose  :  false;
+
+					jModalClose = function () {
+						if (window.jModalClose_no_tinyMCE) window.jModalClose_no_tinyMCE.apply(this, arguments);
+						tinyMCE.activeEditor.windowManager.close();
+					};
+				}
+
+				if (typeof window.SqueezeBoxClose_no_tinyMCE === 'undefined')
+				{
+					if (typeof(SqueezeBox) == 'undefined')  SqueezeBox = {};
+					window.SqueezeBoxClose_no_tinyMCE = typeof(SqueezeBox.close) == 'function'  ?  SqueezeBox.close  :  false;
+
+					SqueezeBox.close = function () {
+						if (window.SqueezeBoxClose_no_tinyMCE)  window.SqueezeBoxClose_no_tinyMCE.apply(this, arguments);
+						tinyMCE.activeEditor.windowManager.close();
+					};
+				}
+			}
+		};
+		jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});</script>
+</head>
+<body  class="logo-type-custom headerstyle-dark menustyle-light footerstyle-light font-family-helvetica font-size-is-large menu-type-dropdownmenu layout-mode-responsive col12">
+        <header id="rt-top-surround">
+				<div id="rt-top" >
+			<div class="rt-container">
+				<div class="rt-grid-3 rt-alpha">
+            <div class="rt-block logo-block">
+            <a href="../index.html" id="rt-logo"></a>
+			<span id="rt-logo-accent"></span>
+        </div>
+        
+</div>
+<div class="rt-grid-9 rt-omega">
+    	<div class="rt-block menu-block">
+		<div class="gf-menu-device-container"></div>
+<ul class="gf-menu l1 " >
+                    <li class="item104 active last" >
+
+            <a class="item" href="index.html"  >
+                Home            </a>
+
+             
+        </li>
+                            <li class="item135" >
+
+            <a class="item" href="concept.html"  >
+                Concept            </a>
+
+             
+        </li>
+                            <li class="item136" >
+
+            <a class="item" href="members.html"  >
+                Members            </a>
+
+             
+        </li>
+                            <li class="item158" >
+
+            <a class="item" href="publication-en.html"  >
+                Publication            </a>
+
+             
+        </li>
+            </ul>		<div class="clear"></div>
+	</div>
+	
+</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+						</header>
+	
+	 		<div id="rt-drawer">
+			<div class="rt-container">
+           		           		<div class="clear"></div>
+			</div>
+       </div>
+   			<div id="rt-breadcrumbs">
+		<div class="rt-container">
+			<div class="rt-grid-12 rt-alpha rt-omega">
+               <div class="rt-block ">
+           	<div class="module-surround">
+	           		                	<div class="module-content">
+	                		<div aria-label="breadcrumbs" role="navigation">
+	<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+					<li class="active">
+				<span class="divider icon-location"></span>
+			</li>
+		
+						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+											<a itemprop="item" href="index.html" class="pathway"><span itemprop="name">Home</span></a>
+					
+											<span class="divider">&gt;</span>
+										<meta itemprop="position" content="1">
+				</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+					<span itemprop="name">
+						フォーム					</span>
+					<meta itemprop="position" content="2">
+				</li>
+				</ul>
+</div>
+	                	</div>
+                	</div>
+           </div>
+	
+</div>
+	   		<div class="clear"></div>				   
+		</div>
+	</div>
+	
+	<div id="rt-mainbody-surround">
+		<div class="rt-container">			
+			    			          
+<div id="rt-main" class="mb9-sa3">
+                <div class="rt-container">
+                    <div class="rt-grid-9 ">
+<div class="rt-block">
+	                        <div id="rt-mainbody">
+								<div class="component-content">
+	                            	<section class="blog " itemscope itemtype="http://schema.org/Blog">
+
+
+
+
+
+							<div class="items-row cols-1 row-0">
+		<article class="item column-1" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		
+
+	<h2>
+					JAJ RNA 2018			</h2>
+
+
+
+
+
+<p>
+	<strong>We are pleased to announce the 2nd JAJ (Joint Australia-Japan/Japan-Australia Joint) RNA Meeting to be held on November 5&ndash;7, 2018 in Sapporo. The JAJ Meeting aims at encouraging the exchange of ideas and stimulating collaborations between RNA biologists in Australia and Japan. This meeting follows the success of the 1st JAJ RNA meeting held in Sydney in 2014. We would encourage the RNA biologists, particularly young students and postdocs, to join this exciting meeting to make new friends and enjoy the excellent science as well as beautiful autumn colors in Hokkaido.</strong></p>
+<p style="text-align: right;">
+	<strong style="text-align: right;">Organizers</strong><br style="text-align: right;" />
+	<span style="text-align: right;"><strong>Archa Fox</strong> (The University of Western Australia, Australia)</span><br />
+	<strong>Chen Davidovich</strong> (Monash University, Australia)<br />
+	<strong>Thomas Preiss</strong> (The Australian National University, Australia)<br />
+	<strong>Charlie Bond</strong> (The University of Western Australia, Australia)<br />
+	<span style="text-align: right;"> <strong>Tetsuro Hirose</strong> (Hokkaido University, Japan)</span><br style="text-align: right;" />
+	<span style="text-align: right;"><strong>Shin-ichi Nakagawa</strong> (Hokkaido University, Japan)</span><br style="text-align: right;" />
+	<span style="text-align: right;"><strong>Yukihide Tomari</strong> (The University of Tokyo, Japan)</span></p>
+<table align="center">
+	<tbody>
+		<tr>
+			<td>
+				<a href="#form"><button class="btn btn-primary btn-large" type="button"><font color="#ffffff"><span class="icon-share-alt">&nbsp;</span>Registration &amp; Abstract Submission</font></button></a></td>
+		</tr>
+	</tbody>
+</table>
+<table align="center" border="1" cellpadding="0" cellspacing="0" style="width: 100%; margin: 15px 0px">
+	<tbody>
+		<tr>
+			<td>
+				<table align="center" border="0" cellpadding="3" cellspacing="0" style="width: 100%">
+					<tbody>
+						<tr>
+							<td nowrap="nowrap" style="text-align: right;">
+								<span class="icon-calendar">&nbsp;</span><strong>Date:</strong></td>
+							<td>
+								9:00, November 5 &ndash; 12:20, November 7, 2018</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" style="text-align: right;">
+								<span class="icon-time">&nbsp;</span><strong>Abstract Deadline:</strong></td>
+							<td>
+								September 30, 2018&nbsp; <a href="../images/forms/Abstract_template.doc" title="Abstract Template"><button class="btn btn-small" type="button"><span class="icon-download">&nbsp;</span>Download Abstract Template</button></a></td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" style="text-align: right;">
+								<span class="icon-map-marker">&nbsp;</span><strong>Venue:</strong></td>
+							<td>
+								The Alumni Hall &quot;Furate&quot;, Hokkaido University (<span class="icon-hand-right">&nbsp;</span><a href="https://goo.gl/maps/oHQkbcb5rYk" target="_blank">Map</a>&nbsp;<span class="icon-home">&nbsp;</span><a href="http://www.sapporo.travel/choose/hotel/station/?lang=en" target="_blank">Hotel suggestions</a>)</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<div class="alert alert-info">
+	On the second day (November 6), an excursion&nbsp;<span class="icon-road">&nbsp;</span>and a banquet&nbsp;<span class="icon-glass">&nbsp;</span>are scheduled&nbsp;after the sessions. To join, please complete <a href="#form">pre-registration</a><a href="#form">&nbsp;</a>and&nbsp;pay the fee (2,000 JPY) in cash at the reception desk.</div>
+<table border="0" cellpadding="1" cellspacing="1" style="width: 100%">
+	<tbody>
+		<tr>
+			<td align="left" valign="top" width="70%">
+				<h4>
+					Keynote Speakers</h4>
+				<p>
+					<strong>Greg Goodall&nbsp;</strong>(Centre for Cancer Biology,&nbsp;Australia)<br />
+					<strong>Tsutomu Suzuki</strong>&nbsp;(The University of Tokyo, Japan)</p>
+				<h4>
+					Speakers</h4>
+				<p>
+					<strong>Minni Anko </strong>(Monash University, Australia)<br />
+					<strong>Sureshkumar Balasubramanian </strong>(Monash University, Australia)<br />
+					<strong>Timothy Bredy </strong>(The University of Queensland, Australia)<br />
+					<strong>Chen Davidovich</strong> (Monash University, Australia)<br />
+					<strong>Aleksandra Filipovska</strong> (The University of Western Australia, Australia)<br />
+					<strong>Tamas Fischer</strong> (The Australian National University, Australia)<br />
+					<strong>Archa Fox</strong> (The University of Western Australia, Australia)<br />
+					<strong>Rippei Hayashi&nbsp;</strong>(The Australian National University, Australia)<br />
+					<strong>Thomas Preiss</strong> (The Australian National University, Australia)<br />
+					<strong>Ian Small</strong> (The University of Western Australia, Australia)<br />
+					<strong>Irina Voineagu</strong> (The University of New South Wales, Australia)<br />
+					<strong>Robert Weatheritt</strong> (Garvan Institute of Medical Research)</p>
+				<p>
+					<strong>Hiroshi Asahara</strong> (Tokyo Medical and Dental University, Japan)<br />
+					<strong>Toshinobu Fujiwara</strong> (Kindai University, Japan)<br />
+					<strong>Tetsuro Hirose</strong> (Hokkaido University, Japan)<br />
+					<strong>Shintaro Iwasaki</strong> (RIKEN, Japan)<br />
+					<strong>Yuka Iwasaki</strong> (Keio University, Japan)<br />
+					<strong>Yasuhiko Kato</strong> (Osaka University, Japan)<br />
+					<strong>Daiju Kitagawa</strong> (The University of Tokyo, Japan)<br />
+					<strong>Hidehito Kuroyanagi</strong> (Tokyo Medical and Dental University, Japan)<br />
+					<strong>Shinichi Nakagawa</strong> (Hokkaido University, Japan)<br />
+					<strong>Hiroshi Nishimasu</strong> (The University of Tokyo, Japan)<br />
+					<strong>Misato Ohtani</strong> (Nara Institute of Science and Technology, Japan)<br />
+					<strong>Mikiko Siomi</strong>&nbsp;(The University of Tokyo, Japan)<br />
+					<strong>Yukihide Tomari</strong> (The University of Tokyo, Japan)<br />
+					<strong>Wallace Yip</strong> (RIKEN, Japan)</p>
+			</td>
+			<td align="center" valign="top" width="30%">
+				<a href="../images/forms/jaj_poster.pdf" target="_blank"><img alt="" class="cke-resize cke-resize" src="../images/forms/jaj_poster3.jpg" /></a><br />
+				<span class="icon-arrow-up">&nbsp;</span>Download the poster PDF</td>
+		</tr>
+	</tbody>
+</table>
+<h4>
+	<a name="form"></a><br />
+	Registration is now closed.</h4>
+<p class="contact-redacted">The contact email address is no longer published.</p>
+<style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Helvetica Neue'; color: #316ad6}</style>
+
+
+
+<div class="item-separator"></div>
+	</article>
+						<span class="row-separator"></span>
+				</div>
+										<div class="items-row cols-1 row-1">
+		<article class="item column-1" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		
+
+	<h2>
+					International Symposium “Clues to Non-coding RNA Taxonomy”			</h2>
+
+
+
+
+
+<p>
+	<strong>We are pleased to&nbsp;announce&nbsp;an International Symposium entitled&nbsp;&ldquo;Clues to Non-coding RNA&nbsp;Taxonomy&rdquo;&nbsp;to be held&nbsp;on June 27, 2016, in&nbsp;conjunction&nbsp;with&nbsp;<a href="http://www.siomilab.med.keio.ac.jp/TRC/" target="_blank">Tokyo RNA Club</a> the 20th Meeting.&nbsp;This symposium aims to gather newest&nbsp;knowledge on long and small non-coding RNAs. It will provide future research directions for discovering the&nbsp;</strong><strong>function and mechanism of diverse non-coding RNA molecules, which will eventually allow us to establish their systematic classification&nbsp;</strong><strong>termed&nbsp;</strong><strong>&ldquo;</strong><strong><a href="concept/index.html" target="_blank">non-coding RNA taxonomy</a>.</strong><strong>&rdquo;</strong></p>
+<p style="text-align: right;">
+	<strong style="text-align: right;">Organizers</strong><br style="text-align: right;" />
+	<span style="text-align: right;">Tetsuro Hirose (Hokkaido University)</span><br style="text-align: right;" />
+	<span style="text-align: right;">Shin-ichi Nakagawa (RIKEN)</span><br style="text-align: right;" />
+	<span style="text-align: right;">Yukihide Tomari (The University of Tokyo)</span></p>
+<table align="center" border="1" cellpadding="0" cellspacing="0" style="width: 95%">
+	<tbody>
+		<tr>
+			<td>
+				<table align="center" border="0" cellpadding="3" cellspacing="0" style="width: 100%">
+					<tbody>
+						<tr>
+							<td nowrap="nowrap" style="text-align: right;">
+								<span class="icon-calendar"><strong>&nbsp;Date:&nbsp;</strong></span></td>
+							<td>
+								Monday, June 27th 2016</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" style="text-align: right;">
+								<span class="icon-time"><strong>&nbsp;Time:&nbsp;</strong></span></td>
+							<td>
+								9:00&ndash;18:30</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" style="text-align: right;">
+								<span class="icon-map-marker"><strong>&nbsp;Venue:&nbsp;</strong></span></td>
+							<td>
+								Yayoi Auditorium, Ichijo Hall (<span class="icon-hand-right">&nbsp;</span><a href="https://www.google.com/maps/d/viewer?mid=zhpWGySg5z3Y.kqNzUb3-Zf0Y" target="_blank">Map &amp; directions</a>&nbsp;<span class="icon-home">&nbsp;</span><a href="https://www.google.com/maps/d/viewer?mid=zhpWGySg5z3Y.kbhmxWfkgKrE" target="_blank">Hotel suggestions</a>)</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" style="text-align: right;">
+								<span class="icon-tag"><strong>&nbsp;Fee:&nbsp;</strong></span></td>
+							<td>
+								Free, but pre-registration is required.&nbsp;<a href="#form">Please submit the form below.</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="infotip-jck">
+	After the meeting, a social gathering with light bites&nbsp;<span class="icon-glass">&nbsp;will</span> be held at <a href="https://www.google.com/maps/d/edit?mid=zhpWGySg5z3Y.kqNzUb3-Zf0Y&amp;usp=sharing" target="_blank">Yayoi Auditorium Annex, Seihoku Gallery</a>. To join, please complete <a href="#form">pre-registration</a>&nbsp;and&nbsp;pay 1,000 JPY in cash at the reception desk.</p>
+<h4>
+	<br />
+	Speakers</h4>
+<table align="center" border="0" cellpadding="1" cellspacing="1" style="width: 95%">
+	<tbody>
+		<tr>
+			<td width="70%">
+				<strong>Phillip Zamore</strong>&nbsp;(University of Massachusetts, USA)<br />
+				<strong>Ingrid Grummt&nbsp;</strong>(German Cancer Research Center, Germany)<br />
+				<strong>Yijun Qi</strong>&nbsp;(Tsinghua University, China)<br />
+				<strong>Saba Valadkhan</strong>&nbsp;(Case Western Reserve University, USA)<br />
+				<strong>Lingling Chen</strong>&nbsp;(Shanghai Institutes for Biological Sciences, China)<br />
+				<strong>Thomas Preiss</strong>&nbsp;(The Australian National University, Australia)<br />
+				<strong>Tetsuro Hirose</strong>&nbsp;(Hokkaido University, Japan)<br />
+				<strong>Archa Fox</strong>&nbsp;(University of Western Australia, Australia)<br />
+				<strong>Charlie Bond</strong>&nbsp;(University of Western Australia, Australia)<br />
+				<strong>Subhash Lakhotia</strong>&nbsp;(Banaras Hindu University, India)<br />
+				<strong>Yuji Kageyama</strong>&nbsp;(Kobe University, Japan)<br />
+				<strong>Piero Carninci</strong>&nbsp;(RIKEN, Japan)<br />
+				<strong>Olivia Rissland</strong>&nbsp;(University of Toronto, Canada)<br />
+				<strong>Martin Simard</strong>&nbsp;(Laval University, Canada)<br />
+				<strong>Hiroshi Nishimasu</strong>&nbsp;(The University of Tokyo, Japan)<br />
+				<strong>Yuka Iwasaki</strong>&nbsp;(Keio University, Japan)<br />
+				<strong>Yohei Kirino</strong>&nbsp;(Thomas Jefferson University, USA)<br />
+				<strong>Julie Claycomb</strong>&nbsp;(University of Toronto, Canada)<br />
+				<strong>Jinbiao Ma</strong>&nbsp;(Fudan University, China)<br />
+				<strong>Yukihide Tomari</strong>&nbsp;(The University of Tokyo, Japan)<br />
+				<strong>Shintaro Iwasaki</strong>&nbsp;(UC Berkeley, USA)<br />
+				<strong>Herv&eacute; Seitz</strong>&nbsp;(IGH CNRS, France)<br />
+				<strong>Shinichi Nakagawa</strong>&nbsp;(RIKEN, Japan)</td>
+			<td align="center" valign="top" width="24%">
+				<a href="../images/blog/news/program.pdf" target="_blank"><img alt="" src="../images/blog/news/program.png" /></a><br />
+				<span class="icon-arrow-up">&nbsp;Download the program PDF</span></td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+<div class="item-separator"></div>
+	</article>
+						<span class="row-separator"></span>
+				</div>
+										<div class="items-row cols-1 row-2">
+		<article class="item column-1" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		
+
+	<h2>
+					Tokyo RNA Club, the 22nd meeting			</h2>
+
+
+
+
+
+<p>
+	<strong>We are pleased to&nbsp;announce&nbsp;Tokyo RNA Club, the 23nd meeting, to be held&nbsp;on Monday, June 26th, 2017.&nbsp;<a href="http://www.siomilab.med.keio.ac.jp/TRC/" target="_blank">Tokyo RNA Club</a> aims to facilicate interactions between local (especially young) researchers and leading RNA scientists from around the world. To attend, please complete the <a href="#form">registration form</a> below.</strong></p>
+<p style="text-align: right;">
+	<strong style="text-align: right;">Organizers</strong><br style="text-align: right;" />
+	<span style="text-align: right;">Tetsuro Hirose (Hokkaido University)</span><br style="text-align: right;" />
+	<span style="text-align: right;">Shin-ichi Nakagawa (</span>Hokkaido University<span style="text-align: right;">)</span><br style="text-align: right;" />
+	<span style="text-align: right;">Yukihide Tomari (The University of Tokyo)</span></p>
+<table align="center" border="1" cellpadding="0" cellspacing="0" style="width: 95%">
+	<tbody>
+		<tr>
+			<td>
+				<table align="center" border="0" cellpadding="3" cellspacing="0" style="width: 100%">
+					<tbody>
+						<tr>
+							<td nowrap="nowrap" style="text-align: right;">
+								<span class="icon-calendar"><strong>&nbsp;Date:&nbsp;</strong></span></td>
+							<td>
+								Saturday, Dec. 3rd, 2016</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" style="text-align: right;">
+								<span class="icon-time"><strong>&nbsp;Time:&nbsp;</strong></span></td>
+							<td>
+								13:30&ndash;18:15</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" style="text-align: right;">
+								<span class="icon-map-marker"><strong>&nbsp;Venue:&nbsp;</strong></span></td>
+							<td>
+								Takeda Hall, The University of Tokyo (<a href="https://drive.google.com/open?id=1jMwzlj90cMpvqSZecEXu15bMQCc" target="_blank">Map</a>)</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" style="text-align: right;">
+								<span class="icon-tag"><strong>&nbsp;Fee:&nbsp;</strong></span></td>
+							<td>
+								Free, but pre-registration is required.&nbsp;<a href="#form">Please submit the form below.</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<div class="alert alert-info">
+	After the meeting, a social gathering with light bites&nbsp;<span class="icon-glass">&nbsp;will</span> be held. To join, please complete <a href="#form">pre-registration</a>&nbsp;and&nbsp;pay 1,000 JPY in cash at the reception desk.</div>
+<h4>
+	<br />
+	Speakers</h4>
+<table align="center" border="0" cellpadding="1" cellspacing="1" style="width: 95%">
+	<tbody>
+		<tr>
+			<td valign="top" width="70%">
+				<strong>Bill Theurkauf</strong>&nbsp;(University of Massachusetts, USA)<br />
+				<strong>Eric Lai</strong>&nbsp;(Memorial Sloan Kettering Cancer Center, USA)<br />
+				<strong>Nara Lee</strong>&nbsp;(University of Pittsburgh, USA)<br />
+				<strong>Paul Anderson</strong>&nbsp;(Brigham and Women&#39;s Hospital, USA)<br />
+				<strong>Chengqi Yi</strong>&nbsp;(Peking University, China)<br />
+				<strong>Leah Houri-Ze&#39;evi</strong>&nbsp;(Tel Aviv University, Israel)<br />
+				<strong>Taro Mannen</strong>&nbsp;(Hokkaido University, Japan)<br />
+				<strong>Akitoshi Sadahiro</strong>&nbsp;(Kyoto University, Japan)<br />
+				<strong>Kyungmin Baeg</strong>&nbsp;(The University of Tokyo, Japan)<br />
+				<strong>Ryo Onishi</strong>&nbsp;(The University of Tokyo, Japan)</td>
+			<td align="center" valign="top" width="24%">
+				<a href="../images/forms/trc22.pdf" target="_blank"><img alt="" class="cke-resize" src="../images/forms/trc22.jpg" /></a><br />
+				<span class="icon-arrow-up">&nbsp;Download the program PDF</span></td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+
+
+
+<div class="item-separator"></div>
+	</article>
+						<span class="row-separator"></span>
+				</div>
+										<div class="items-row cols-1 row-3">
+		<article class="item column-1" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		
+
+	<h2>
+					Tokyo RNA Club, the 23rd meeting			</h2>
+
+
+
+
+
+<p>
+	<strong>We are pleased to&nbsp;announce&nbsp;Tokyo RNA Club, the 23rd meeting, to be held&nbsp;on Monday, June 26th, 2017.&nbsp;<a href="http://www.siomilab.med.keio.ac.jp/TRC/" target="_blank">Tokyo RNA Club</a> aims to facilicate interactions between local (especially young) researchers and leading RNA scientists from around the world. To attend, please complete the <a href="#form">registration form</a> below.</strong></p>
+<p style="text-align: right;">
+	<strong style="text-align: right;">Organizers</strong><br />
+	Mikiko Siomi (The University of Tokyo)<br style="text-align: right;" />
+	<span style="text-align: right;">Tetsuro Hirose (Hokkaido University)</span></p>
+<table align="center" border="1" cellpadding="0" cellspacing="0" style="width: 95%">
+	<tbody>
+		<tr>
+			<td>
+				<table align="center" border="0" cellpadding="3" cellspacing="0" style="width: 100%">
+					<tbody>
+						<tr>
+							<td nowrap="nowrap" style="text-align: right;">
+								<span class="icon-calendar"><strong>&nbsp;Date:&nbsp;</strong></span></td>
+							<td>
+								Monday, June 26th, 2017</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" style="text-align: right;">
+								<span class="icon-time"><strong>&nbsp;Time:&nbsp;</strong></span></td>
+							<td>
+								13:30&ndash;18:00</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" style="text-align: right;">
+								<span class="icon-map-marker"><strong>&nbsp;Venue:&nbsp;</strong></span></td>
+							<td>
+								Takeda Hall, The University of Tokyo (<a href="https://drive.google.com/open?id=1jMwzlj90cMpvqSZecEXu15bMQCc" target="_blank">Map</a>)</td>
+						</tr>
+						<tr>
+							<td nowrap="nowrap" style="text-align: right;">
+								<span class="icon-tag"><strong>&nbsp;Fee:&nbsp;</strong></span></td>
+							<td>
+								Free, but pre-registration is required.&nbsp;<a href="#form">Please submit the form below.</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<div class="alert alert-info">
+	After the meeting, a social gathering with light bites&nbsp;<span class="icon-glass">&nbsp;will</span> be held. To join, please complete <a href="#form">pre-registration</a>&nbsp;and&nbsp;pay 1,000 JPY in cash at the reception desk.</div>
+<h4>
+	Speakers</h4>
+<table align="center" border="0" cellpadding="1" cellspacing="1" style="width: 95%">
+	<tbody>
+		<tr>
+			<td valign="top" width="70%">
+				<p>
+					<strong>Julius Brennecke </strong>(IMBA, Austria)<br />
+					<strong>Gene Yeo</strong> (UCSD, USA)<br />
+					<strong>Joan A Steitz</strong> (Yale Univ, USA)<br />
+					<strong>Howard Y Chang&nbsp;</strong>(Stanford Univ, USA)<br />
+					<strong>Torben H Jensen </strong>(Aarhus Univ, Denmark)<br />
+					<strong>Kazuhiro Sakakibara</strong> (Univ Tokyo)<br />
+					<strong>Koh Ono</strong> (Kyoto Univ)<br />
+					<strong>Shungo Adachi </strong>(AIST)<br />
+					<strong>Takeshi Chujo</strong> (Hokkaido Univ)<br />
+					<strong>Daiju Kitagawa </strong>(NIG)</p>
+			</td>
+			<td align="center" valign="top" width="24%">
+				<a href="../images/forms/trc23.pdf" target="_blank"><img alt="" class="cke-resize" src="../images/forms/trc23.jpg" style="" /></a><br />
+				<span class="icon-arrow-up">&nbsp;Download the poster PDF</span></td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+
+
+
+<div class="item-separator"></div>
+	</article>
+						<span class="row-separator"></span>
+				</div>
+				
+
+
+<div class="cat-children">
+	</div>
+
+
+
+</section>
+								</div>
+	                        </div>
+						</div>
+                                                                    </div>
+                                <div class="rt-grid-3 ">
+                <div id="rt-sidebar-c">
+                               <div class="rt-block ">
+           	<div class="module-surround">
+	           				<div class="module-title">
+	                		<h2 class="title">Language</h2>
+			</div>
+	                		                	<div class="module-content">
+	                		<div class="mod-languages">
+
+	<ul class="lang-inline" dir="ltr">
+						<li>
+			<a href="../ja/index.html">
+							日本語						</a>
+			</li>
+							</ul>
+
+</div>
+	                	</div>
+                	</div>
+           </div>
+	
+                </div>
+            </div>
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+						</div>
+	</div>     
+
+		
+		<div id="rt-footer">
+		<div class="rt-container">
+			<div class="rt-grid-12 rt-alpha rt-omega">
+               <div class="rt-block ">
+           	<div class="module-surround">
+	           		                	<div class="module-content">
+	                		
+
+<div class="custom"  >
+	<p class="copyright">Copyright ©2014 non-coding RNA neo-taxonomy. All Rights Reserved.</p></div>
+	                	</div>
+                	</div>
+           </div>
+	
+</div>
+			<div class="clear"></div>
+		</div>
+	</div>		
+	
+				</div>
+</body>
+</html>

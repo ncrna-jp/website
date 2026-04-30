@@ -1,0 +1,14 @@
+dir = getDirectory("Choose a Directory");
+list = getFileList(dir);
+setBatchMode(true);
+for (i=0; i<list.length;i++){
+open(list[i]);
+blue=list[i]+" (blue)";
+green=list[i]+" (green)";
+red=list[i]+" (red)";
+run("Split Channels");
+close(blue);
+run("Coloc 2", "channel_1=[red] channel_2=[green] roi_or_mask=<None> spearman's_rank_correlation manders'_correlation kendall's_tau_rank_correlation costes'_significance_test psf=3 costes_randomisations=10");
+close(green);
+close(red);
+}

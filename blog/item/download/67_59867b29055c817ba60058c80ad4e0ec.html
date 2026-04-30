@@ -1,0 +1,45 @@
+#setup
+library(data.table)
+library(ggplot2)
+setwd("~/Desktop/ENCODE")
+data=fread("shRNA_RNAseq_FPKM.txt")
+setkey(data,"gene_id")
+meta=read.delim("shRNA_RNAseq_meta.txt")
+
+while (TRUE){
+  
+ #input gene of interest ID
+ gi=readline("enter GENCODEv24 ID: ") # set the ENCODEv24_ID for the gene of interest
+ 
+ #create data table for ggplot2
+  FPKM_gi<-data[gi] # select FPKM data for the gene of interest
+  FPKM_gi<-as.data.table(t(FPKM_gi),keep.rownames=TRUE) #exchange the row and column
+  FPKM_gi<-FPKM_gi[-1,] #delete row containing extra information
+  FPKM_meta=merge(meta,FPKM_gi,by.x="File.accession",by.y="rn") #assign metadata
+  FPKM_meta$V1<-as.numeric(FPKM_meta$V1) #change data type for ggplot2
+  
+  FPKM_HepG2=FPKM_meta[FPKM_meta$Biosample.term.name=="HepG2",]
+  FPKM_K562=FPKM_meta[FPKM_meta$Biosample.term.name=="K562",]
+  
+  #plot data HepG2
+  ggplot(FPKM_HepG2,aes(x=reorder(x=Experiment.target,X=V1),y=V1)) +
+    geom_boxplot() +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+    ylab(paste("FPKM",gi)) +
+    xlab("KD gene")
+  ggsave(filename=paste("plot_HepG2_",gi,".png",sep=""),height=5,width=nrow(FPKM_HepG2)/15,limitsize=FALSE)
+  
+  #plot data K562
+  ggplot(FPKM_K562,aes(x=reorder(x=Experiment.target,X=V1),y=V1)) +
+    geom_boxplot() +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+    ylab(paste("FPKM",gi)) +
+    xlab("KD gene")
+  ggsave(filename=paste("plot_K562_",gi,".png",sep=""),height=5,width=nrow(FPKM_K562)/15,limitsize=FALSE)
+
+  #continue?
+  x=readline("continue? (y/n): ")  
+  if (x=="n") {
+    break
+  }
+  }

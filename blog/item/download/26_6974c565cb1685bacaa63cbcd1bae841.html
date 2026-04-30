@@ -1,0 +1,1389 @@
+Last login: Thu Jun  4 11:20:12 on console
+NakagawsMacBook:~ Nakagawa_MacBook$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/i
+> 
+> 
+NakagawsMacBook:~ Nakagawa_MacBook$ 
+NakagawsMacBook:~ Nakagawa_MacBook$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/i
+> 
+> 
+> 
+> 
+NakagawsMacBook:~ Nakagawa_MacBook$ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+Whoops, the Homebrew installer has moved! Please instead run:
+
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+Also, please ask wherever you got this link from to update it to the above.
+Thanks!
+NakagawsMacBook:~ Nakagawa_MacBook$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+==> This script will install:
+/usr/local/bin/brew
+/usr/local/Library/...
+/usr/local/share/man/man1/brew.1
+
+Press RETURN to continue or any other key to abort
+==> /usr/bin/sudo /bin/mkdir /usr/local
+
+WARNING: Improper use of the sudo command could lead to data loss
+or the deletion of important system files. Please double-check your
+typing when using sudo. Type "man sudo" for more information.
+
+To proceed, enter your password, or type Ctrl-C to abort.
+
+Password:
+==> /usr/bin/sudo /bin/chmod g+rwx /usr/local
+==> /usr/bin/sudo /usr/bin/chgrp admin /usr/local
+==> /usr/bin/sudo /bin/mkdir /Library/Caches/Homebrew
+==> /usr/bin/sudo /bin/chmod g+rwx /Library/Caches/Homebrew
+==> Downloading and installing Homebrew...
+remote: Counting objects: 3587, done.
+remote: Compressing objects: 100% (3432/3432), done.
+remote: Total 3587 (delta 32), reused 1432 (delta 17), pack-reused 0
+Receiving objects: 100% (3587/3587), 2.76 MiB | 899.00 KiB/s, done.
+Resolving deltas: 100% (32/32), done.
+From https://github.com/Homebrew/homebrew
+ * [new branch]      master     -> origin/master
+HEAD is now at 11bf762 mysql: use https for mirror.
+==> Installation successful!
+==> Next steps
+Run `brew help` to get started
+NakagawsMacBook:~ Nakagawa_MacBook$ brew doctor
+Your system is ready to brew.
+NakagawsMacBook:~ Nakagawa_MacBook$ brew list
+NakagawsMacBook:~ Nakagawa_MacBook$ brew install libtiff
+==> Installing libtiff dependency: jpeg
+==> Downloading https://homebrew.bintray.com/bottles/jpeg-8d.yosemite.bottle.2.t
+######################################################################## 100.0%
+==> Pouring jpeg-8d.yosemite.bottle.2.tar.gz
+🍺  /usr/local/Cellar/jpeg/8d: 18 files, 776K
+==> Installing libtiff
+==> Downloading https://homebrew.bintray.com/bottles/libtiff-4.0.3.yosemite.bott
+######################################################################## 100.0%
+==> Pouring libtiff-4.0.3.yosemite.bottle.tar.gz
+🍺  /usr/local/Cellar/libtiff/4.0.3: 254 files, 3.8M
+NakagawsMacBook:~ Nakagawa_MacBook$ brew install fftw
+==> Downloading https://homebrew.bintray.com/bottles/fftw-3.3.4_1.yosemite.bottl
+######################################################################## 100.0%
+==> Pouring fftw-3.3.4_1.yosemite.bottle.tar.gz
+🍺  /usr/local/Cellar/fftw/3.3.4_1: 39 files, 11M
+NakagawsMacBook:~ Nakagawa_MacBook$ cd /usr/local/Cellar/wndchrm-1.52.775
+NakagawsMacBook:wndchrm-1.52.775 Nakagawa_MacBook$ ./configure
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... ./install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking for ranlib... ranlib
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking math.h usability... yes
+checking math.h presence... yes
+checking for math.h... yes
+checking for fftw_execute in -lfftw3... yes
+checking fftw3.h usability... yes
+checking fftw3.h presence... yes
+checking for fftw3.h... yes
+checking for TIFFReadScanline in -ltiff... yes
+checking tiffio.h usability... yes
+checking tiffio.h presence... yes
+checking for tiffio.h... yes
+checking for tr1/unordered_map... no
+checking for tr1/unordered_set... no
+checking for native unordered_map... yes
+checking for native unordered_set... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+NakagawsMacBook:wndchrm-1.52.775 Nakagawa_MacBook$ make
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-am
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-cmatrix.o -MD -MP -MF .deps/libchrm_a-cmatrix.Tpo -c -o libchrm_a-cmatrix.o `test -f 'cmatrix.cpp' || echo './'`cmatrix.cpp
+In file included from cmatrix.cpp:33:
+./cmatrix.h:250:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:250:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:250:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:254:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:254:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:254:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:258:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:258:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:258:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:262:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:262:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:262:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:266:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:266:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:266:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+cmatrix.cpp:170:11: warning: unused variable 'a' [-Wunused-variable]
+                        size_t a, num = width*height;
+                               ^
+cmatrix.cpp:170:14: warning: unused variable 'num' [-Wunused-variable]
+                        size_t a, num = width*height;
+                                  ^
+cmatrix.cpp:390:11: warning: comparison of unsigned expression < 0 is always
+      false [-Wtautological-compare]
+        x0 = (x1 < 0 ? 0 : x1);
+              ~~ ^ ~
+cmatrix.cpp:391:11: warning: comparison of unsigned expression < 0 is always
+      false [-Wtautological-compare]
+        y0 = (y1 < 0 ? 0 : y1);
+              ~~ ^ ~
+cmatrix.cpp:820:26: warning: comparison of unsigned expression >= 0 is always
+      true [-Wtautological-compare]
+                                if (xx < width && xx >= 0) {
+                                                  ~~ ^  ~
+cmatrix.cpp:823:14: warning: comparison of unsigned expression >= 0 is always
+      true [-Wtautological-compare]
+                                                if (yy >= 0 && yy < height) {
+                                                    ~~ ^  ~
+11 warnings generated.
+mv -f .deps/libchrm_a-cmatrix.Tpo .deps/libchrm_a-cmatrix.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-TrainingSet.o -MD -MP -MF .deps/libchrm_a-TrainingSet.Tpo -c -o libchrm_a-TrainingSet.o `test -f 'TrainingSet.cpp' || echo './'`TrainingSet.cpp
+In file included from TrainingSet.cpp:70:
+In file included from ./TrainingSet.h:39:
+In file included from ./signatures.h:38:
+./cmatrix.h:250:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:250:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:250:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:254:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:254:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:254:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:258:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:258:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:258:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:262:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:262:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:262:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:266:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:266:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:266:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+TrainingSet.cpp:221:46: warning: expression which evaluates to zero treated as a
+      null pointer constant of type 'char *' [-Wnon-literal-null-conversion]
+        else class_labels[CONTINUOUS_CLASS_INDEX] = '\0';
+                                                    ^~~~
+TrainingSet.cpp:496:46: warning: expression which evaluates to zero treated as a
+      null pointer constant of type 'char *' [-Wnon-literal-null-conversion]
+        else class_labels[CONTINUOUS_CLASS_INDEX] = '\0';
+                                                    ^~~~
+TrainingSet.cpp:684:6: warning: logical not is only applied to the left hand
+      side of this comparison [-Wlogical-not-parentheses]
+        if( ! TestSet->count > 0 ) SetAttrib(TestSet);
+            ^                ~
+TrainingSet.cpp:684:6: note: add parentheses after the '!' to evaluate the
+      comparison first
+        if( ! TestSet->count > 0 ) SetAttrib(TestSet);
+            ^
+              (                 )
+TrainingSet.cpp:684:6: note: add parentheses around left hand side expression to
+      silence this warning
+        if( ! TestSet->count > 0 ) SetAttrib(TestSet);
+            ^
+            (               )
+8 warnings generated.
+mv -f .deps/libchrm_a-TrainingSet.Tpo .deps/libchrm_a-TrainingSet.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-signatures.o -MD -MP -MF .deps/libchrm_a-signatures.Tpo -c -o libchrm_a-signatures.o `test -f 'signatures.cpp' || echo './'`signatures.cpp
+In file included from signatures.cpp:42:
+./cmatrix.h:250:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:250:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:250:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:254:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:254:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:254:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:258:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:258:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:258:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:262:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:262:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:262:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:266:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:266:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:266:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+5 warnings generated.
+mv -f .deps/libchrm_a-signatures.Tpo .deps/libchrm_a-signatures.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-FeatureNames.o -MD -MP -MF .deps/libchrm_a-FeatureNames.Tpo -c -o libchrm_a-FeatureNames.o `test -f 'FeatureNames.cpp' || echo './'`FeatureNames.cpp
+mv -f .deps/libchrm_a-FeatureNames.Tpo .deps/libchrm_a-FeatureNames.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-FeatureAlgorithms.o -MD -MP -MF .deps/libchrm_a-FeatureAlgorithms.Tpo -c -o libchrm_a-FeatureAlgorithms.o `test -f 'FeatureAlgorithms.cpp' || echo './'`FeatureAlgorithms.cpp
+In file included from FeatureAlgorithms.cpp:35:
+./cmatrix.h:250:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:250:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:250:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:254:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:254:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:254:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:258:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:258:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:258:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:262:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:262:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:262:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:266:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:266:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:266:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+5 warnings generated.
+mv -f .deps/libchrm_a-FeatureAlgorithms.Tpo .deps/libchrm_a-FeatureAlgorithms.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-ImageTransforms.o -MD -MP -MF .deps/libchrm_a-ImageTransforms.Tpo -c -o libchrm_a-ImageTransforms.o `test -f 'ImageTransforms.cpp' || echo './'`ImageTransforms.cpp
+In file included from ImageTransforms.cpp:35:
+./cmatrix.h:250:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:250:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:250:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:254:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:254:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:254:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:258:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:258:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:258:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:262:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:262:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:262:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:266:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:266:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:266:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+5 warnings generated.
+mv -f .deps/libchrm_a-ImageTransforms.Tpo .deps/libchrm_a-ImageTransforms.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-Tasks.o -MD -MP -MF .deps/libchrm_a-Tasks.Tpo -c -o libchrm_a-Tasks.o `test -f 'Tasks.cpp' || echo './'`Tasks.cpp
+In file included from Tasks.cpp:35:
+./cmatrix.h:250:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:250:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:250:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:254:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:254:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:254:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:258:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:258:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:258:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:262:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:262:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:262:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:266:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:266:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:266:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+Tasks.cpp:85:3: warning: delete called on 'const ComputationTask' that is
+      abstract but has non-virtual destructor [-Wdelete-non-virtual-dtor]
+                delete (instances[idx]);
+                ^
+6 warnings generated.
+mv -f .deps/libchrm_a-Tasks.Tpo .deps/libchrm_a-Tasks.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-WORMfile.o -MD -MP -MF .deps/libchrm_a-WORMfile.Tpo -c -o libchrm_a-WORMfile.o `test -f 'WORMfile.cpp' || echo './'`WORMfile.cpp
+mv -f .deps/libchrm_a-WORMfile.Tpo .deps/libchrm_a-WORMfile.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-wndchrm_error.o -MD -MP -MF .deps/libchrm_a-wndchrm_error.Tpo -c -o libchrm_a-wndchrm_error.o `test -f 'wndchrm_error.cpp' || echo './'`wndchrm_error.cpp
+mv -f .deps/libchrm_a-wndchrm_error.Tpo .deps/libchrm_a-wndchrm_error.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-specfunc.o -MD -MP -MF .deps/libchrm_a-specfunc.Tpo -c -o libchrm_a-specfunc.o `test -f 'gsl/specfunc.cpp' || echo './'`gsl/specfunc.cpp
+gsl/specfunc.cpp:1680:54: warning: taking the absolute value of unsigned type
+      'unsigned int' has no effect [-Wabsolute-value]
+        result->err = 2.0 * GSL_DBL_EPSILON * prod * fabs(n-m);
+                                                     ^
+gsl/specfunc.cpp:1680:54: note: remove the call to 'fabs' since unsigned values
+      cannot be negative
+        result->err = 2.0 * GSL_DBL_EPSILON * prod * fabs(n-m);
+                                                     ^~~~
+1 warning generated.
+mv -f .deps/libchrm_a-specfunc.Tpo .deps/libchrm_a-specfunc.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-FuzzyCalc.o -MD -MP -MF .deps/libchrm_a-FuzzyCalc.Tpo -c -o libchrm_a-FuzzyCalc.o `test -f 'colors/FuzzyCalc.cpp' || echo './'`colors/FuzzyCalc.cpp
+mv -f .deps/libchrm_a-FuzzyCalc.Tpo .deps/libchrm_a-FuzzyCalc.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-CombFirst4Moments.o -MD -MP -MF .deps/libchrm_a-CombFirst4Moments.Tpo -c -o libchrm_a-CombFirst4Moments.o `test -f 'statistics/CombFirst4Moments.cpp' || echo './'`statistics/CombFirst4Moments.cpp
+In file included from statistics/CombFirst4Moments.cpp:33:
+In file included from statistics/CombFirst4Moments.h:35:
+./cmatrix.h:250:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:250:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:250:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:254:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:254:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:254:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:258:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:258:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:258:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:262:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:262:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:262:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:266:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:266:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:266:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+5 warnings generated.
+mv -f .deps/libchrm_a-CombFirst4Moments.Tpo .deps/libchrm_a-CombFirst4Moments.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-FeatureStatistics.o -MD -MP -MF .deps/libchrm_a-FeatureStatistics.Tpo -c -o libchrm_a-FeatureStatistics.o `test -f 'statistics/FeatureStatistics.cpp' || echo './'`statistics/FeatureStatistics.cpp
+In file included from statistics/FeatureStatistics.cpp:33:
+In file included from statistics/FeatureStatistics.h:35:
+./cmatrix.h:250:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:250:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:250:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:254:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:254:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:254:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:258:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:258:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:258:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:262:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:262:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:262:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:266:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:266:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:266:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+statistics/FeatureStatistics.cpp:242:15: warning: comparison of unsigned
+      expression >= 0 is always true [-Wtautological-compare]
+                        if      (i >= 0 && i <= 3) C1++;
+                                 ~ ^  ~
+6 warnings generated.
+mv -f .deps/libchrm_a-FeatureStatistics.Tpo .deps/libchrm_a-FeatureStatistics.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-gabor.o -MD -MP -MF .deps/libchrm_a-gabor.Tpo -c -o libchrm_a-gabor.o `test -f 'textures/gabor.cpp' || echo './'`textures/gabor.cpp
+In file included from textures/gabor.cpp:3:
+./cmatrix.h:250:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:250:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:250:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:254:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:254:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:254:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:258:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:258:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:258:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:262:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:262:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:262:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:266:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:266:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:266:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+5 warnings generated.
+mv -f .deps/libchrm_a-gabor.Tpo .deps/libchrm_a-gabor.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-CVIPtexture.o -MD -MP -MF .deps/libchrm_a-CVIPtexture.Tpo -c -o libchrm_a-CVIPtexture.o `test -f 'textures/haralick/CVIPtexture.cpp' || echo './'`textures/haralick/CVIPtexture.cpp
+textures/haralick/CVIPtexture.cpp:1060:27: warning: expression result unused
+      [-Wunused-value]
+  for (i = 0; i < 4; ++i, *Tp++)
+                          ^~~~~
+textures/haralick/CVIPtexture.cpp:1070:3: warning: expression result unused
+      [-Wunused-value]
+  *Tp++;
+  ^~~~~
+2 warnings generated.
+mv -f .deps/libchrm_a-CVIPtexture.Tpo .deps/libchrm_a-CVIPtexture.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-haralick.o -MD -MP -MF .deps/libchrm_a-haralick.Tpo -c -o libchrm_a-haralick.o `test -f 'textures/haralick/haralick.cpp' || echo './'`textures/haralick/haralick.cpp
+In file included from textures/haralick/haralick.cpp:4:
+In file included from textures/haralick/haralick.h:7:
+./cmatrix.h:250:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:250:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:250:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:254:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:254:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:254:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:258:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:258:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:258:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:262:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:262:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:262:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:266:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:266:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:266:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+5 warnings generated.
+mv -f .deps/libchrm_a-haralick.Tpo .deps/libchrm_a-haralick.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-tamura.o -MD -MP -MF .deps/libchrm_a-tamura.Tpo -c -o libchrm_a-tamura.o `test -f 'textures/tamura.cpp' || echo './'`textures/tamura.cpp
+In file included from textures/tamura.cpp:6:
+In file included from textures/tamura.h:7:
+./cmatrix.h:250:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:250:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:250:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:254:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:254:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:254:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:258:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:258:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:258:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:262:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:262:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:262:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:266:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:266:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:266:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+5 warnings generated.
+mv -f .deps/libchrm_a-tamura.Tpo .deps/libchrm_a-tamura.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-zernike.o -MD -MP -MF .deps/libchrm_a-zernike.Tpo -c -o libchrm_a-zernike.o `test -f 'textures/zernike/zernike.cpp' || echo './'`textures/zernike/zernike.cpp
+In file included from textures/zernike/zernike.cpp:35:
+./cmatrix.h:250:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:250:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:250:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:254:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:254:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:254:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:258:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:258:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:258:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:262:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:262:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:262:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:266:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:266:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:266:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+textures/zernike/zernike.cpp:216:6: warning: logical not is only applied to the
+      left hand side of this comparison [-Wlogical-not-parentheses]
+        if (! rad > 0.0) rad = N;
+            ^     ~
+textures/zernike/zernike.cpp:216:6: note: add parentheses after the '!' to
+      evaluate the comparison first
+        if (! rad > 0.0) rad = N;
+            ^
+              (        )
+textures/zernike/zernike.cpp:216:6: note: add parentheses around left hand side
+      expression to silence this warning
+        if (! rad > 0.0) rad = N;
+            ^
+            (    )
+6 warnings generated.
+mv -f .deps/libchrm_a-zernike.Tpo .deps/libchrm_a-zernike.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-ChebyshevFourier.o -MD -MP -MF .deps/libchrm_a-ChebyshevFourier.Tpo -c -o libchrm_a-ChebyshevFourier.o `test -f 'transforms/ChebyshevFourier.cpp' || echo './'`transforms/ChebyshevFourier.cpp
+In file included from transforms/ChebyshevFourier.cpp:37:
+In file included from transforms/ChebyshevFourier.h:35:
+./cmatrix.h:250:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:250:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:250:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:254:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:254:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:254:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:258:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:258:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:258:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:262:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:262:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:262:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:266:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:266:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:266:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+5 warnings generated.
+mv -f .deps/libchrm_a-ChebyshevFourier.Tpo .deps/libchrm_a-ChebyshevFourier.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-chebyshev.o -MD -MP -MF .deps/libchrm_a-chebyshev.Tpo -c -o libchrm_a-chebyshev.o `test -f 'transforms/chebyshev.cpp' || echo './'`transforms/chebyshev.cpp
+In file included from transforms/chebyshev.cpp:34:
+./cmatrix.h:250:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:250:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:250:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:254:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:254:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:254:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:258:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:258:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:258:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:262:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:262:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:262:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:266:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:266:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:266:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+5 warnings generated.
+mv -f .deps/libchrm_a-chebyshev.Tpo .deps/libchrm_a-chebyshev.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-radon.o -MD -MP -MF .deps/libchrm_a-radon.Tpo -c -o libchrm_a-radon.o `test -f 'transforms/radon.cpp' || echo './'`transforms/radon.cpp
+mv -f .deps/libchrm_a-radon.Tpo .deps/libchrm_a-radon.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-Common.o -MD -MP -MF .deps/libchrm_a-Common.Tpo -c -o libchrm_a-Common.o `test -f 'transforms/wavelet/Common.cpp' || echo './'`transforms/wavelet/Common.cpp
+mv -f .deps/libchrm_a-Common.Tpo .deps/libchrm_a-Common.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-convolution.o -MD -MP -MF .deps/libchrm_a-convolution.Tpo -c -o libchrm_a-convolution.o `test -f 'transforms/wavelet/convolution.cpp' || echo './'`transforms/wavelet/convolution.cpp
+mv -f .deps/libchrm_a-convolution.Tpo .deps/libchrm_a-convolution.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-DataGrid2D.o -MD -MP -MF .deps/libchrm_a-DataGrid2D.Tpo -c -o libchrm_a-DataGrid2D.o `test -f 'transforms/wavelet/DataGrid2D.cpp' || echo './'`transforms/wavelet/DataGrid2D.cpp
+mv -f .deps/libchrm_a-DataGrid2D.Tpo .deps/libchrm_a-DataGrid2D.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-DataGrid3D.o -MD -MP -MF .deps/libchrm_a-DataGrid3D.Tpo -c -o libchrm_a-DataGrid3D.o `test -f 'transforms/wavelet/DataGrid3D.cpp' || echo './'`transforms/wavelet/DataGrid3D.cpp
+mv -f .deps/libchrm_a-DataGrid3D.Tpo .deps/libchrm_a-DataGrid3D.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-Filter.o -MD -MP -MF .deps/libchrm_a-Filter.Tpo -c -o libchrm_a-Filter.o `test -f 'transforms/wavelet/Filter.cpp' || echo './'`transforms/wavelet/Filter.cpp
+mv -f .deps/libchrm_a-Filter.Tpo .deps/libchrm_a-Filter.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-FilterSet.o -MD -MP -MF .deps/libchrm_a-FilterSet.Tpo -c -o libchrm_a-FilterSet.o `test -f 'transforms/wavelet/FilterSet.cpp' || echo './'`transforms/wavelet/FilterSet.cpp
+mv -f .deps/libchrm_a-FilterSet.Tpo .deps/libchrm_a-FilterSet.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-Symlet5.o -MD -MP -MF .deps/libchrm_a-Symlet5.Tpo -c -o libchrm_a-Symlet5.o `test -f 'transforms/wavelet/Symlet5.cpp' || echo './'`transforms/wavelet/Symlet5.cpp
+mv -f .deps/libchrm_a-Symlet5.Tpo .deps/libchrm_a-Symlet5.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-Wavelet.o -MD -MP -MF .deps/libchrm_a-Wavelet.Tpo -c -o libchrm_a-Wavelet.o `test -f 'transforms/wavelet/Wavelet.cpp' || echo './'`transforms/wavelet/Wavelet.cpp
+mv -f .deps/libchrm_a-Wavelet.Tpo .deps/libchrm_a-Wavelet.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-WaveletHigh.o -MD -MP -MF .deps/libchrm_a-WaveletHigh.Tpo -c -o libchrm_a-WaveletHigh.o `test -f 'transforms/wavelet/WaveletHigh.cpp' || echo './'`transforms/wavelet/WaveletHigh.cpp
+mv -f .deps/libchrm_a-WaveletHigh.Tpo .deps/libchrm_a-WaveletHigh.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-WaveletLow.o -MD -MP -MF .deps/libchrm_a-WaveletLow.Tpo -c -o libchrm_a-WaveletLow.o `test -f 'transforms/wavelet/WaveletLow.cpp' || echo './'`transforms/wavelet/WaveletLow.cpp
+mv -f .deps/libchrm_a-WaveletLow.Tpo .deps/libchrm_a-WaveletLow.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-WaveletMedium.o -MD -MP -MF .deps/libchrm_a-WaveletMedium.Tpo -c -o libchrm_a-WaveletMedium.o `test -f 'transforms/wavelet/WaveletMedium.cpp' || echo './'`transforms/wavelet/WaveletMedium.cpp
+mv -f .deps/libchrm_a-WaveletMedium.Tpo .deps/libchrm_a-WaveletMedium.Po
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -Os  -MT libchrm_a-wt.o -MD -MP -MF .deps/libchrm_a-wt.Tpo -c -o libchrm_a-wt.o `test -f 'transforms/wavelet/wt.cpp' || echo './'`transforms/wavelet/wt.cpp
+mv -f .deps/libchrm_a-wt.Tpo .deps/libchrm_a-wt.Po
+rm -f libchrm.a
+ar cru libchrm.a libchrm_a-cmatrix.o libchrm_a-TrainingSet.o libchrm_a-signatures.o libchrm_a-FeatureNames.o libchrm_a-FeatureAlgorithms.o libchrm_a-ImageTransforms.o libchrm_a-Tasks.o libchrm_a-WORMfile.o libchrm_a-wndchrm_error.o libchrm_a-specfunc.o libchrm_a-FuzzyCalc.o libchrm_a-CombFirst4Moments.o libchrm_a-FeatureStatistics.o libchrm_a-gabor.o libchrm_a-CVIPtexture.o libchrm_a-haralick.o libchrm_a-tamura.o libchrm_a-zernike.o libchrm_a-ChebyshevFourier.o libchrm_a-chebyshev.o libchrm_a-radon.o libchrm_a-Common.o libchrm_a-convolution.o libchrm_a-DataGrid2D.o libchrm_a-DataGrid3D.o libchrm_a-Filter.o libchrm_a-FilterSet.o libchrm_a-Symlet5.o libchrm_a-Wavelet.o libchrm_a-WaveletHigh.o libchrm_a-WaveletLow.o libchrm_a-WaveletMedium.o libchrm_a-wt.o 
+ranlib libchrm.a
+g++ -DHAVE_CONFIG_H -I.  -fPIC  -Wall -g -O2  -MT wndchrm.o -MD -MP -MF .deps/wndchrm.Tpo -c -o wndchrm.o wndchrm.cpp
+In file included from wndchrm.cpp:44:
+In file included from ./TrainingSet.h:39:
+In file included from ./signatures.h:38:
+./cmatrix.h:250:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:250:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:250:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:254:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:254:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:254:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:258:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:258:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:258:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:262:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:262:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:262:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+./cmatrix.h:266:7: warning: logical not is only applied to the left hand side of
+      this comparison [-Wlogical-not-parentheses]
+                if (! stats.n() > 0) UpdateStats();
+                    ^           ~
+./cmatrix.h:266:7: note: add parentheses after the '!' to evaluate the
+      comparison first
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                      (            )
+./cmatrix.h:266:7: note: add parentheses around left hand side expression to
+      silence this warning
+                if (! stats.n() > 0) UpdateStats();
+                    ^
+                    (          )
+5 warnings generated.
+mv -f .deps/wndchrm.Tpo .deps/wndchrm.Po
+g++ -Wall -g -O2    -o wndchrm wndchrm.o libchrm.a -lm -ltiff -L. -lchrm -lfftw3 -ltiff 
+gcc -DHAVE_CONFIG_H -I.  -fPIC   -g -O2 -MT readTiffData.o -MD -MP -MF .deps/readTiffData.Tpo -c -o readTiffData.o `test -f 'util/readTiffData.c' || echo './'`util/readTiffData.c
+mv -f .deps/readTiffData.Tpo .deps/readTiffData.Po
+gcc -DHAVE_CONFIG_H -I.  -fPIC   -g -O2 -MT color_deconvolution.o -MD -MP -MF .deps/color_deconvolution.Tpo -c -o color_deconvolution.o `test -f 'util/color_deconvolution.c' || echo './'`util/color_deconvolution.c
+mv -f .deps/color_deconvolution.Tpo .deps/color_deconvolution.Po
+gcc  -g -O2   -o util/color_deconvolution readTiffData.o color_deconvolution.o -lm -ltiff -ltiff 
+NakagawsMacBook:wndchrm-1.52.775 Nakagawa_MacBook$ make install
+ ./install-sh -c -d '/usr/local/bin'
+  /usr/bin/install -c wndchrm util/color_deconvolution '/usr/local/bin'
+make[1]: Nothing to be done for `install-data-am'.
+NakagawsMacBook:wndchrm-1.52.775 Nakagawa_MacBook$ cd /usr/local/Cellar/phylip-3.695/exe 
+NakagawsMacBook:exe Nakagawa_MacBook$ chmod +x linkmac
+NakagawsMacBook:exe Nakagawa_MacBook$ ./linkmac
+NakagawsMacBook:exe Nakagawa_MacBook$ 

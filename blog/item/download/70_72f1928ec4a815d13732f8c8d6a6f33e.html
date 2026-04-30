@@ -1,0 +1,69 @@
+function PubMedSlack() {
+  var TOKEN = 'xoxp-12345678901-12345678901-12345678901-1234567890'; // 手順I.でメモをしたAPI Tokenに必ず書き換えてください。
+
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheets()[0];
+  var data = sheet.getRange(1, 1, sheet.getLastRow(), 4).getValues();
+
+  for (var i = 0; i < data.length; i++) {
+    var keyword = data[i][0];
+    var feedURL = data[i][1];
+    var channel = data[i][2];
+    var lastFetched = data[i][3];
+
+    // Fetch
+    try {
+      var rssText = UrlFetchApp.fetch(feedURL).getContentText(); // たまにPubMedが404エラーを出すことがあるのでtryで回避
+    } catch (e) {
+      continue; // もしエラーが出てもとりあえず無視(次回fetchできれば良しとする)
+    }
+
+    // Parse
+    var rss = XmlService.parse(rssText);
+    var items = rss.getRootElement().getChildren('channel')[0].getChildren('item');
+
+    // Check new items
+    var news = [];
+    for each(var item in items) {
+      if (lastFetched.indexOf(item.getChild('guid').getText()) < 0) {
+        news.push(item);
+      }
+    }
+
+    if (news.length > 0) {
+      // Prepare attachments
+      var att = [];
+      for each(var item in news) {
+        var title = item.getChild('title').getText();
+        var authors = item.getChild('author').getText().replace(/^\s+/, ''); // なぜか先頭にあるスペースを削除
+        var journal = item.getChild('category').getText();
+        var link = item.getChild('link').getText();
+        var paperInfo = authors + '\n' + '_*' + journal + '*_';
+
+        att.push({
+          title: title,
+          title_link: link,
+          color: '#336699', // NCBIカラー(自由に変更してください)
+          text: paperInfo,
+          mrkdwn_in: ['text'],
+        })
+      }
+
+      // Post Slack
+      var app = SlackApp.create(TOKEN);
+      var message = 'Here are new papers for *"' + keyword + '"* :eyes:'; // 配信の際のメッセージ(自由に変更してください)
+      app.postMessage(channel, message, {
+        username: 'PubMed RSS', // RSSを配信してくれるボットの名前(自由に変更してください)
+        icon_emoji: ':rolled_up_newspaper:', //RSSを配信してくれるボットのアイコン(自由に変更してください)
+        attachments: JSON.stringify(att),
+      });
+    }
+
+    // Record fetched items
+    var guids = [];
+    for each(var item in items) {
+      guids.push(item.getChild('guid').getText());
+    }
+    sheet.getRange(i + 1, 4).setValue(guids.join(','));
+  }
+}

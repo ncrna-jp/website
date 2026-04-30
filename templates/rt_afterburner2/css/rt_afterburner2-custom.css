@@ -1,0 +1,267 @@
+/* BODY */
+body{color: #6c6c6c;}
+
+.pager{text-align: center;}
+.pager ul{margin: 10px 0;}
+.pager ul li:first-child{margin-right: 60px;}
+.article-index{font-size: 0.85em;}
+
+
+/* HEADER */
+.rt-block.menu-block{float: right;}
+
+.gf-menu{
+background: rgb(255,255,255);
+background: -moz-linear-gradient(top,  rgb(255,255,255) 0%, rgb(229,229,229) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(255,255,255)), color-stop(100%,rgb(229,229,229)));
+background: -webkit-linear-gradient(top,  rgb(255,255,255) 0%,rgb(229,229,229) 100%);
+background: -o-linear-gradient(top,  rgb(255,255,255) 0%,rgb(229,229,229) 100%);
+background: -ms-linear-gradient(top,  rgb(255,255,255) 0%,rgb(229,229,229) 100%);
+background: linear-gradient(to bottom,  rgb(255,255,255) 0%,rgb(229,229,229) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+}
+
+.gf-menu .item{font-size: 0.85em; color: #222;}
+.gf-menu.l1 > li > .item{font-size: 0.9em;}
+.gf-menu.l1 > li.active{background: #ed763a;}
+.gf-menu.l1 > li.active > .item{color: #fff;}
+.gf-menu.l1 > li > .item{color: #4a4a4a;}
+.gf-menu.l1 > li > .item::after{border-right: 1px solid #bababa}
+.gf-menu .dropdown ul li:hover > .item{color: #fff; font-weight: bold;}
+
+#rt-top-surround #rt-top{
+background: rgb(65,68,73);
+background: -moz-linear-gradient(top,  rgba(65,68,73,1) 0%, rgba(44,48,53,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(65,68,73,1)), color-stop(100%,rgba(44,48,53,1)));
+background: -webkit-linear-gradient(top,  rgba(65,68,73,1) 0%,rgba(44,48,53,1) 100%);
+background: -o-linear-gradient(top,  rgba(65,68,73,1) 0%,rgba(44,48,53,1) 100%);
+background: -ms-linear-gradient(top,  rgba(65,68,73,1) 0%,rgba(44,48,53,1) 100%);
+background: linear-gradient(to bottom,  rgba(65,68,73,1) 0%,rgba(44,48,53,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#414449', endColorstr='#2c3035',GradientType=0 );
+}
+
+#rt-top-surround #rt-header{background: #efefef;}
+
+
+/* FOOTER */
+#rt-footer .rt-block{margin: 0 10px; padding: 0 15px;}
+#rt-footer .rt-block.footerMenu{margin: 10px; padding: 15px;}
+#rt-footer a{color: #ed763a;}
+
+
+/* FOOTER MEMU */
+ul#footermenu.nav.menu{list-style: none !important; display: block; font-size: 0.75em; margin-top: -15px;}
+ul#footermenu.nav.menu li{float: left; margin-right: 15px;}
+ul#footermenu.nav.menu li a{font-weight: normal;}
+ul#footermenu.nav.menu li a:before{
+  content: "›" !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 1.2em !important;
+  margin-right: 6px !important;
+  vertical-align: baseline !important;
+}
+#rt-breadcrumbs .icon-location:before{
+  content: ">" !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 0.9em !important;
+}
+#rt-breadcrumbs .breadcrumb .divider img{
+  display: none !important;
+}
+#rt-breadcrumbs .breadcrumb .divider{
+  display: inline !important;
+  color: inherit !important;
+  font-size: inherit !important;
+  padding: 0 4px !important;
+}
+#rt-breadcrumbs .breadcrumb .divider:not(.icon-location):before{
+  content: "" !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  display: none !important;
+  margin: 0 !important;
+}
+#rt-breadcrumbs a:after{
+  content: "" !important;
+}
+
+
+/* COPYRIGHT */
+.copyright{font-size: 0.85em; color: #a0a0a0; text-align: center; text-transform: uppercase;}
+
+/* OFFLINE MODE */
+#rt-offline-body h1.sitename{font-size: 300%;}
+
+
+/* BOOK IT! */
+form#list div.subjectsList div.subject div.properties{font-size: 0.8em;}
+#bookSetting .price{border: 1px solid #666;}
+
+
+/* K2 */
+div.itemIsFeatured, div.catItemIsFeatured, div.userItemIsFeatured{background: none;}
+div.catItemHeader span.catItemDateCreated{color: #666; font-size: 0.85em;}
+
+div.itemIntroText{font-size: 15px; line-height: 1.7em; font-weight: normal; color: #6c6c6c;}
+
+
+/* K2 - BLOG */
+div.catItemImageBlock{float: left;  margin-right: 15px;}
+span.catItemImage{text-align: left;}
+div.catItemReadMore a{float: right;}
+div.catItemCategory{clear: both;}
+div.catItemCommentsLink{border-right: none;}
+
+div.k2AuthorsListBlock ul li{clear: left;}
+#itemListPrimary .catItemView{margin-top: 30px;}
+div.catItemHeader h3.catItemTitle, 
+div.userItemHeader h3.userItemTitle{font-size: 1.7em; font-family: Arial, "Hiragino Kaku Gothic Pro", "MS PGothic", sans-serif; font-weight: bold;}
+div.catItemHeader span.catItemAuthor{font-size: 0.9em;}
+
+
+/* K2 - BLOG - LOGIN BOX - */
+input#modlgn_username.inputbox, input#modlgn_passwd.inputbox{width: 90%;} 
+
+
+/* K2 - COMMENT */
+div.itemCommentsForm form input#submitCommentButton{background: #ee7736; border: 1px solid #999;}
+
+
+/* K2 - ITEM - PUBLICATION */
+#ncRNA{font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;}
+#ncRNA .catItemHeader h3.catItemTitle{font-size: 1.15em;}
+#ncRNA .catItemIntroText{font-size: 0.9em; line-height: 1.4em; padding: 0;}
+#ncRNA .catItemExtraFields{margin: 10px 0 0 0; padding: 6px 0; border-bottom: 1px dotted #ddd;}
+#ncRNA .catItemExtraFields h4{display: none;}
+#ncRNA .catItemExtraFields ul li{font-size: 0.85em;}
+#ncRNA .catItemExtraFields ul li.even{background: #f6f6f6;}
+
+span.catItemExtraFieldsValue{display: table;}
+span.itemExtraFieldsValue {display: table;}
+
+/* K2 - ITEM - ACTIVITIES */
+#ncRNA2{}
+#ncRNA2 .catItemHeader h3.catItemTitle{font-size: 1.15em; font-family: Arial, "Hiragino Kaku Gothic Pro", "MS PGothic", sans-serif; font-weight: bold;}
+#ncRNA2 .catItemIntroText{/*font-size: 0.85em;*/ line-height: 1.4em; padding: 0;}
+#ncRNA2 .catItemExtraFields{margin: 10px 0 0 0; padding: 6px 0 0 0; border-bottom: 1px dotted #ddd;}
+#ncRNA2 .catItemExtraFields h4{display: none;}
+#ncRNA2 .catItemExtraFields ul li{font-size: 0.85em;}
+#ncRNA2 .catItemExtraFields ul li.even{background: #f6f6f6;}
+#ncRNA2 .catItemAttachmentsBlock{font-size: 0.85em;}
+
+
+/* K2 - ITEM DETAILE PAGES */
+#k2Container .itemHeader h2.itemTitle{font-size: 1.8em; font-family: Arial, "Hiragino Kaku Gothic Pro", "MS PGothic", sans-serif; font-weight: bold;}
+#k2Container .itemExtraFields h3{display: none;}
+#k2Container .itemAuthorDetails h3.itemAuthorName{font-size: 1.2em;}
+
+/*　K2 - LATEST ITEMS */
+#k2Container .latestItemList .latestItemHeader{margin-top: 20px;}
+div.itemContainer{float: none;}
+
+
+/* K2 - Social */
+div.itemFacebookButton{width: 450px;}
+
+/* Form */
+div.popover.bottom{
+	background: #FFF;
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+
+/* 4CREATOR TYPOGRAPHY */
+.clr{clear: both;}
+
+
+/* PAGE - PLANNED */
+#plannedLeft{float: left; width: 69%;}
+
+#plannedRight{float: right; width: 29%;}
+
+
+/* PAGE - PROFILE (intro) */
+.profileBox{clear: both; border: 2px solid #efefef; padding: 10px; background: #ffffec; font-size: 0.9em}
+.profileBox2{clear: both; border: 2px solid #efefef; padding: 10px; background: #F8FEE5; font-size: 0.9em}
+.profileBox .icon, .profileBox2 .icon{float: left; width: 90px;}
+.profileBox ul, .profileBox2 ul{list-style: none; font-size: 0.9em;}
+.pBox h5{color: #5c5c5c; text-transform: none; font-size: 1.0em;}
+
+#profileLeft{float: left; width: 30%;}
+#profileLeft .publication{width: 158px; text-align: center;}
+
+#profileRight{float: right; width: 67%;}
+#profileRight ul.company{margin: 0 0 50px 0; list-style: none; display: block; font-weight: bold;}
+#profileRight ul.company li{float: left; margin-right: 15px;}
+#profileRight h3{clear: left; font-size: 1.1em; border-bottom: 2px solid #efefef;}
+#profileRight .challenge{font-size: 1.3em; font-style: italic; margin-bottom: 15px;}
+#profileRight .type{font-size: 0.8em;}
+#plannedRight h5{text-transform: none;}
+
+
+/* PAGES - MEMBERS */
+.pBox{float: left; width: 273px; margin: 0 14px 30px 0;}
+
+
+/* MODULE -SLIDESHOW */
+#zentools98 .zentools.flexslider .slides img {margin:0}
+
+
+/*  MODULE - GALLERY */
+.zenshadow a img{cursor: pointer;}
+
+
+/* MODULE - APPLICATION */
+#rt-main .zentools .title{border-bottom: none;}
+#rt-main .zeninner .zentitle{ padding: 0; }
+#rt-main .zeninner .zentitle h2{font-size: 18px; line-height: 40px; letter-spacing: normal; margin-top: 0; margin-bottom: 15px; border-bottom: 6px solid #badbe1;}
+#rt-main .zeninner .zentitle h2 a{color: #32373D;}
+#rt-main .zeninner .zentext{font-size: 13px; line-height: 1.7em;}
+#rt-main .box1 .readon{background: #ed763a; border-color: #ed763a;}
+#rt-main .zentools.grid .zenitem {margin-bottom: 3px;}
+
+
+/* MODULE - FUATURED */
+#rt-main #k2ModuleBox112 ul{list-style: none; margin-left: 0;}
+#rt-main #k2ModuleBox112 ul li{border-bottom: 1px solid #efefef; margin-bottom: 15px;}
+#rt-main #k2ModuleBox112 ul li a.moduleItemTitle{font-size: 1.1em; font-weight: bold;}
+
+
+/*　MODULE - INFORMATION */
+#rt-bottom #zentools115 .zentools.list ul li{padding: 0; border-bottom: none;}
+#rt-bottom #zentools115 .zentitle{padding: 0;}
+#rt-bottom #zentools115 .zentitle h3{line-height: 1.4em; font-size: 1.0em; margin: 0 0 5px 0;}
+#rt-bottom #zentools115 .grid_three{margin-bottom: 0;}
+#rt-bottom #zentools115 li:last-child{margin-top: 10px; font-size: 0.85em;}
+
+
+ /*  MODULE - MICROSCOPE */
+ #microscope{
+	 border: 2px solid #c5c5c5;
+	 border-radius: 10px;
+	 padding: 15px;
+	 background: rgb(249,252,247);
+	 background: -moz-linear-gradient(top,  rgb(249,252,247) 0%, rgb(245,249,240) 100%);
+	 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(249,252,247)), color-stop(100%,rgb(245,249,240)));
+	 background: -webkit-linear-gradient(top,  rgb(249,252,247) 0%,rgb(245,249,240) 100%);
+	 background: -o-linear-gradient(top,  rgb(249,252,247) 0%,rgb(245,249,240) 100%);
+	 background: -ms-linear-gradient(top,  rgb(249,252,247) 0%,rgb(245,249,240) 100%);
+	 background: linear-gradient(to bottom,  rgb(249,252,247) 0%,rgb(245,249,240) 100%);
+	 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fcf7', endColorstr='#f5f9f0',GradientType=0 );
+ }
+ #microscope h3{font-size: 1.3em;}
+ #microscopeLeft{float: left; width: 38%;}
+ #microscopeRight{float: right; width: 58%;}
+ 
+
+
+@media (max-width: 767px) {
+	.rt-container{width: 100%; padding: 0;}
+	.rt-block{padding: 15px 0;}
+	#rt-content-top .rt-block{padding: 15px 8px;}
+	.rt-block.menu-block{float: none; margin: 0 20px;}
+	.gf-menu.l1 > li > .item{color: #fff;}
+	
+	#plannedLeft, #plannedRight, #profileLeft, #profileRight, #microscopeLeft,  #microscopeRight{float: none; width: 100%}
+	#profileLeft .prifilePic{text-align: center;}
+}

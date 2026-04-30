@@ -1,0 +1,55 @@
+#作業ディレクトリの設定。⌘Dでも設定できる。
+setwd("~/Dropbox (RNA_Biol)/blog")
+
+#文字列操作などに便利なライブラリーstringrの読み込み
+library(stringr)
+#fasta形式などのファイル読み込みに便利なライブラリーBiostringsの読み込み
+library(Biostrings)
+
+#データフレームhg38_kgに遺伝子リスト＆エクソン数を読み込み
+hg38_kg<-read.delim("hg38_kg.txt") 
+head(hg38_kg) #中身の確認
+
+#hg38_seqにfasta形式の転写産物リストを読み込み
+hg38_seq<-readDNAStringSet("hg38_kg_seq_fa.txt",format="fasta")
+head(hg38_seq) #中身の確認
+
+#hg38seqの中身をhg38_seq_dataに変換
+hg38_seq_data<-data.frame(ID=names(hg38_seq),length=width(hg38_seq))
+head(hg38_seq_data)
+
+#hg38_seq_dataとhg38_kgを統合したデータフレームhg38_infoを作る
+hg38_info<-data.frame(ID=hg38_kg$X.name,exon=hg38_kg$exonCount,length=width(hg38_seq)) 
+head(hg38_info) #中身の確認
+
+
+#データフレームhg38_utr3に3' UTRの情報を読み込む
+hg38_utr3<-read.delim("hg38_kg_utr3.txt")
+head(hg38_utr3) #中身の確認
+#データフレームhg38_utr3に"length"という列を追加し、"seq"の列にある配列の長さをカウントした数を入れる
+hg38_utr3["length"]<-str_length(hg38_utr3$seq)
+head(hg38_utr3) #中身の確認
+
+#データフレームhg38_utr3に5' UTRの情報を読み込む
+hg38_utr5<-read.delim("hg38_kg_utr5.txt")
+head(hg38_utr5) #中身の確認
+#データフレームhg38_utr5に"length"という列を追加し、"seq"の列にある配列の長さをカウントした数を入れる
+hg38_utr5["length"]<-str_length(hg38_utr5$seq)
+head(hg38_utr5) #中身の確認
+
+#データフレームhg_infoに"utr5"という列を追加し、hg_infoの"ID"の列とhg38_utr5の"X.name"の列の値が一致する時にhg38_utr5の"length"の列の値を入れる。
+hg38_info["utr5"]<-hg38_utr5$length[match(hg38_info$ID,hg38_utr5$X.name)]
+head(hg38_info) #中身の確認
+
+#データフレームhg_infoに"utr3"という列を追加し、hg_infoの"ID"の列とhg38_utr3の"X.name"の列の値が一致する時にhg38_utr3の"length"の列の値を入れる。
+hg38_info["utr3"]<-hg38_utr3$length[match(hg38_info$ID,hg38_utr3$X.name)]
+head(hg38_info) #中身の確認
+
+#テーブルの書き出し
+write.table(hg38_info,"hg38_info.txt",quote=F,col.names=T, row.names=F,sep="\t")
+
+
+cd /Users/Nakagawa_imac/Dropbox (RNA_Biol)/blog
+cat hg38_kg_seq.txt|sed -e '1,1d' > hg38_kg_seq_del.txt
+awk '{print ">"$1"\n"$2}' hg38_kg_seq_del.txt > hg38_kg_seq_fa.txt
+

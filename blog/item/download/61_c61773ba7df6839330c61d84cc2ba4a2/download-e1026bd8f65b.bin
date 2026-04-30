@@ -1,0 +1,55 @@
+setwd("~/Desktop/ENCODE")
+#read metadata
+meta<-read.delim("metadata.tsv")
+head(meta)
+
+#remove mock data
+mock<-grep("mock",meta$Experiment.target)
+meta<-meta[-mock,]
+head(meta)
+
+#select required column only
+meta1<-meta[,c(2,3,7,17,30,42,43)]
+head(meta1)
+
+#change names
+meta1$File.format<-sub("bed narrowPeak","bed",meta1$File.format)
+meta1$Output.type<-sub("minus strand signal of unique reads","minus",meta1$Output.type)
+meta1$Output.type<-sub("plus strand signal of unique reads","plus",meta1$Output.type)
+meta1$Experiment.target<-sub("-human","",meta1$Experiment.target)
+head(meta1)
+
+#select bigWig
+bigWig<-subset(meta1,meta1$File.format=="bigWig")
+head(bigWig)
+
+#select bed
+bed<-subset(meta1,meta1$File.format=="bed")
+head(bed)
+
+#create bed download command
+bed$download<-paste("wget ",bed$File.download.URL," -O ",bed$Biosample.term.name,"_",bed$Experiment.target,"_",bed$Biological.replicate.s.,".bed.gz",sep="")
+head(bed)
+
+#create bigWig download command
+bigWig$download<-paste("wget ",bed$File.download.URL," -O ",bed$Biosample.term.name,"_",bigWig$Experiment.target,"_",bigWig$Output.type,"_",bigWig$Biological.replicate.s.,".bigWig",sep="")
+head(bigWig)
+
+#select genome assembly
+bigWig_hg19<-subset(bigWig,bigWig$Assembly=="hg19")
+bigWig_GRCh38<-subset(bigWig,bigWig$Assembly=="GRCh38")
+bed_hg19<-subset(bed,bed$Assembly=="hg19")
+bed_GRCh38<-subset(bed,bed$Assembly=="GRCh38")
+head(bigWig_hg19)
+head(bigWig_GRCh38)
+head(bed_hg19)
+head(bed_GRCh38)
+
+#create download command file
+write(bigWig_hg19$download,"download_bigWig_hg19.txt")
+write(bigWig_GRCh38$download,"download_bigWig_GRCh38.txt")
+write(bed_hg19$download,"download_bed_hg19.txt")
+write(bed_GRCh38$download,"download_bed_GRCh38.txt")
+
+
+

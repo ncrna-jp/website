@@ -1,0 +1,43 @@
+#データーフレームの統合とグラフの描画
+
+#データフレームkgXrefへアノテーションの対応表のファイルの読み込み
+kgXref<-read.delim("hg38_kg_Xref.txt")
+#データフレームinfoに転写物の長さ等の情報の読み込み
+info<-read.delim("hg38_info.txt")
+#データフレームdiffにcuffdiffが出したgene_expression.diffの読み込み
+diff<-read.delim("gene_expression.diff")
+#diff1にデータフレームdiffの必要jな項目を抽出
+diff1<-diff[,c("test_id","status", "value_1", "value_2", "log2.fold_change.")]
+#hgXrefとinfoをPPAP
+m1<-merge(kgXref,info,by.x="X.kgID",by.y="ID",all=T)
+#m1とdiff1をPPAP
+m2<-merge(m1,diff1,by.x=1,by.y=1,all=T)
+#m2のうちstatusがOKのものだけを抽出したデータフレームm2_filteredを作成
+m2_filtered<-subset(m2,m2$status=="OK")
+#refseqがNR_で始まるものを抽出してデータフレームnoncodingを作成
+noncoding<-m2_filtered[grep("NR_",m2_filtered$refseq),]
+#refseqがNM_で始まるものを抽出してデータフレームnoncodingを作成
+coding<-m2_filtered[grep("NM_",m2_filtered$refseq),]
+#m2_filteredからgeneSymbolがMIATな行を抽出して表示
+m2_filtered[m2_filtered$geneSymbol=="MIAT",]
+#m2_filteredからgeneSymbolがNEAT1なデータを抽出して表示
+m2_filtered[m2_filtered$geneSymbol=="NEAT1",]
+
+
+#グラフ出力用のファイルの準備
+postscript("Scatter_plot.eps", horizontal = FALSE, onefile = FALSE,paper = "special", height = 5, width = 5)
+#FPKM値の散布図をcodingとnoncodingで色を分けて描画
+plot(log(coding$value_1),log(coding$value_2),col=3,xlim=c(-10,10),ylim=c(-10,10),xlab="FPKM_1",ylab="FPKM_2")
+par(new=T) 
+plot(log(noncoding$value_1),log(noncoding$value_2),col=4,xlim=c(-10,10),ylim=c(-10,10),xlab="FPKM_1",ylab="FPKM_2")
+#ファイルへの出力終了
+dev.off()
+
+#グラフ出力用のファイルの準備
+postscript("length.eps", horizontal = FALSE, onefile = FALSE,paper = "special", height = 5, width = 5)
+#
+plot(coding$length,coding$log2.fold_change.,col=3,xlim=c(0,30000),ylim=c(-10,10),xlab="length",ylab="FC")
+par(new=T) 
+plot(noncoding$length,noncoding$log2.fold_change.,col=4,xlim=c(0,30000),ylim=c(-10,10),xlab="length",ylab="FC")#ファイルへの出力終了
+dev.off()
+

@@ -1,0 +1,22 @@
+#プローブ名を調べたい遺伝子の配列をFasta形式のファイルで用意。今回はGomafu.fasta
+#プローブと配列のファイルをcsv形式で用意。今回はArraystar_probe_list.csv。
+library(Biostrings)  
+data<-read.csv("Arraystar_probe_list.csv",stringsAsFactors=F)
+Gomafu<-readDNAStringSet("mNeat1.fasta")
+
+#コンソールに表示するだけの場合
+for (i in 1:59730) {
+	seq<-data[i,2]
+	if (grepl(seq,Gomafu)=="TRUE") {
+		print(data[i,],row.names=FALSE)
+	}
+}
+
+
+#データをファイルとして出力する場合
+for (i in 1:59730) {
+	seq<-data[i,2]
+	if (grepl(seq,Gomafu)=="TRUE") {
+		write.table(data[i,],"result.txt",quote=FALSE,row.names=FALSE,col.names=FALSE,append=TRUE)
+	}
+}
